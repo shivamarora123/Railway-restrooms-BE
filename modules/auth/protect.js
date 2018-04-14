@@ -2,8 +2,8 @@ const bcrypt = require('bcrypt');
 const mongoose = require('mongoose')
 const jwt = require('jsonwebtoken')
 
-const authModel = require(__base + 'models/auth.js')
-const oauthModel = require(__base + 'models/oauth.js')
+const authModel = require(__base + 'models/users.js')
+//const oauthModel = require(__base + 'models/oauth.js')
 const config = require(__base + 'system/config.js')
 
 const app = require(__base + 'app.js')
@@ -15,6 +15,7 @@ const auth = (req,res,next) => {
   if (token) {
 		// verifies secret and checks exp
 		jwt.verify(token, config.details.Secret, (err1, decoded) => {
+			/*
 			if(decoded.oauth) {
 				oauthModel.findOne({"userName":decoded.username}, (err2,user) => {
 					if ((err1||err2)||(user.token !== token)||(!token)) {
@@ -26,8 +27,8 @@ const auth = (req,res,next) => {
 						next();
 					}
 				});
-			}
-			else {
+			} */
+
 				authModel.findOne({"userName":decoded.username}, (err2,user) => {
 					if ((err1||err2)||(user.token !== token)||(!token)) {
 						return res.json({ type:false, success: false, message: 'Failed to authenticate token.' });
@@ -38,7 +39,7 @@ const auth = (req,res,next) => {
 						next();
 					}
 				});
-			}
+
 		});
 
 	}

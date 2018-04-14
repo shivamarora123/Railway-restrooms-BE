@@ -1,7 +1,7 @@
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
 
-const authModel = require(__base + 'models/auth.js')
+const authModel = require(__base + 'models/users.js')
 const config = require(__base + 'system/config.js')
 
 const change = (req, res) => {
