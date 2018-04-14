@@ -14,6 +14,7 @@ const settings = {
     "protocol":"https",
     "host":"railway-restrooms.herokuapp.com",
     "port":3000,
+    "secret":"s3cr3t",
     "verification":{
         "sms":false,
         "email":true

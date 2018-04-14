@@ -26,7 +26,7 @@ const checkUser = (req,res) => {
               "type":user.userType
             }
             if(!user.token) {
-              var token = jwt.sign(filteredUser, config.settings.salt, {
+              var token = jwt.sign(filteredUser, config.settings.secret, {
 					     expiresIn: 86400 // expires in 24 hours
 				      });
             }
