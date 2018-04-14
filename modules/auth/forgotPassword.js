@@ -18,7 +18,10 @@ const forgotPass = (req,res) => {
       res.json({ success: false, message: 'Authentication failed. User not found.' })
     }
     if(user){
-      console.log(user)
+
+
+        console.log(user)
+
       let subject = "Forgot Password for Railway Restrooms."
       let message = "Please use the following OTP to change your password. \n "+user.changePwdCode
       sendEmail(user.email, subject, message)
