@@ -1,0 +1,29 @@
+{
+  "name": "railway-restrooms",
+  "version": "1.0.0",
+  "description": "## Introduction >This is a backend for Railway Restrooms website similar to Trivago. Where a user can book railway rest-rooms online without any paperwork. ## Installation and Running",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^2.0.0",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.2.1",
+    "mongoose": "^5.0.14",
+    "nodemailer": "^4.6.4",
+    "nodemailer-smtp-transport": "^2.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node system/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivamarora123/Railway-restrooms-BE.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivamarora123/Railway-restrooms-BE/issues"
+  },
+  "homepage": "https://github.com/shivamarora123/Railway-restrooms-BE#readme"
+}
