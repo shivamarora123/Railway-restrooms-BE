@@ -34,7 +34,7 @@ const checkUser = (req,res) => {
             else {
               var token = user.token;
             }
-
+            //console.log(token)
             authModel.findOneAndUpdate({$or: [{"userName":req.body.username}, {"email":req.body.username}, {"phone":req.body.username}]}, {$set:{token:token}}, {new: true}, (err, doc) => {
               if(err){
                 console.log("Something went wrong when updating data!");

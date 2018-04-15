@@ -28,6 +28,11 @@ POST | /auth/change-password | token, oldPassword, newPassword | Success/Error M
 GET | /auth/status | token | Success/Error Message
 POST | /auth/forgotpassword | 
 
+## Testing Route For Login
+Method | Route Address | Input Parameters | Output JSON Expectation
+--- | --- | --- | ---
+POST | /auth/signin |username,password | Success/Error Message
+
 ## Application URL
 
 >https://railway-restrooms.herokuapp.com

@@ -7,6 +7,11 @@ router.post('/signup', require(__base + 'modules/auth/signup.js'))
 
 router.post('/login', require(__base + 'modules/auth/login.js'))
 
+//login debug route
+router.post('/signin',require(__base+'modules/auth/signin.js'))
+
+
+
 /* verify routes */
 router.get('/verify/email/:username/:code', require(__base + 'modules/auth/verifyEmail.js'))
 
