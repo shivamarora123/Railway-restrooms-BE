@@ -20,7 +20,7 @@ GET | / | None | Welcome Message
 
 Method | Route Address | Input Parameters | Output JSON Expectation
 --- | --- | --- | ---
-POST | /auth/register | fullName, userName, email, phone, passEnter, passConfirm | Success/Error Message
+POST | /auth/signup | fullName, userName, email, phone, passEnter, passConfirm | Success/Error Message
 GET | /auth/verify/:username/:code | None | Success/Error Message
 POST | /auth/login | username, password | Success Message -> Token or Error Message
 GET | /auth/logout | token (Header: x-access-token) or Params | Success/Error Message
