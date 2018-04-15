@@ -11,7 +11,7 @@ Users.findOne({$or:[{"userName":req.body.username}]},(error,user)=>{
     }
     if(!user){
         console.log('User Not Found')
-        res.status(409).send('USER NOT FOUND')
+        res.status(404).send('USER NOT FOUND')
     }
     if(user){
         bcrypt.compare(req.body.password,user.password,(err,result)=>{
@@ -25,7 +25,7 @@ Users.findOne({$or:[{"userName":req.body.username}]},(error,user)=>{
             }
             if(!result){
 
-                res.status(200).json({
+                res.status(401).json({
                     success:false,
                     message:"Authentication Failed"
                 })
