@@ -18,7 +18,7 @@ Users.findOne({$or:[{"userName":req.body.username}]},(error,user)=>{
 
         })
     }
-    if(user){
+    else {
         bcrypt.compare(req.body.password,user.password,(err,result)=>{
             if(result){
               //  console.log(result)
