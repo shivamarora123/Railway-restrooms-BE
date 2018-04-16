@@ -2,6 +2,7 @@ const bodyParser = require('body-parser')
 //const mongoose = require('mongoose')
 
 const express=require('express')
+const morgan=require('morgan')
 
 
 
@@ -22,6 +23,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 
+app.use(morgan('combined')))
 /* Global Cross-Origin Access */
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
