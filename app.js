@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 
-app.use(morgan('combined')))
+app.use(morgan('combined'))
 /* Global Cross-Origin Access */
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
